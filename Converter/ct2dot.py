@@ -25,9 +25,9 @@ def ct2dot(cts):
     if len(A) > 0:
         s = dot_structure(A, B)
 
-    print (seq)
-    print (''.join(s))
-    #print s
+    #print (seq)
+    #print (''.join(s))
+    print('Konwersja przebiegła poprawnie!')
 
     with open('ct2dot_file', 'w') as d:
         new_file = d.write(title + '.dot' + '\n' + seq + '\n' + ''.join(s) )

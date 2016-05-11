@@ -77,8 +77,9 @@ def dot2ct(file_lines):
 
     for i in range(1, len(str) + 1):
         ctstring.append("%d%s%s%s%d%s%d%s%d%s%d" % (i, ' ', seq[i - 1], ' ', i - 1, ' ', i + 1, ' ', pairs.get(i, 0), ' ', i))
-    print(title)
-    print('\n'.join(ctstring))
+    #print(title)
+    #print('\n'.join(ctstring))
+    print('Konwersja przebiegła poprawnie!')
 
     with open('dot2ct_file', 'w') as d:
         new_file = d.write(title + '.ct' + '\n' + '\n'.join(ctstring))

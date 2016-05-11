@@ -4,6 +4,8 @@ from ct2dot import ct2dot
 from dot2bpseq import dot2bpseq
 from dot_structure import dot_structure
 from bpseq2dot import bpseq2dot
+from ct2bpseq import ct2bpseq
+from bpseq2ct import bpseq2ct
 
 
 try:
@@ -27,18 +29,20 @@ try:
 
         if x == '0':
             ct2dot(file_lines)
+            ct2bpseq(file_lines)
         elif x == '1':
             ct2dot(file_lines)
         elif x == '2':
-            print('do formatu .bpseq')
+            ct2bpseq(file_lines)
 
     if re.match(".*.bpseq", title):
         x = input('Wybierz format zapisu:' + '\n' + '0 - Wszystkie formaty' + '\n' + '1 - Format .ct' + '\n' + '2 - Format .dot' + '\n')
 
         if x == '0':
             bpseq2dot(file_lines)
+            bpseq2ct(file_lines)
         elif x == '1':
-            print('do formatu .ct')
+            bpseq2ct(file_lines)
         elif x == '2':
             bpseq2dot(file_lines)
 
