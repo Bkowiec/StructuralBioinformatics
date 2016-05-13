@@ -8,14 +8,15 @@ from ct2bpseq import ct2bpseq
 from bpseq2ct import bpseq2ct
 from bpseq2xml import bpseq2rnaml
 from ct2xml import ct2rnaml
+from dot2xml import dot2xml
 
 try:
-    with open('2') as file:
+    with open('3') as file:
         file_lines = file.read().splitlines()
         title = file_lines[0]
 
     if re.match(".*.dot", title):
-        x = input('Wybierz format zapisu:' + '\n' + '0 - Wszystkie formaty'+ '\n' + '1 - Format .ct'+ '\n' + '2 - Format .bpseq' + '\n')
+        x = input('Wybierz format zapisu:' + '\n' + '0 - Wszystkie formaty'+ '\n' + '1 - Format .ct'+ '\n' + '2 - Format .bpseq' + '\n' + '3 - Format .RNAML' + '\n')
 
         if x == '0':
             dot2ct(file_lines)
@@ -24,6 +25,8 @@ try:
             dot2ct(file_lines)
         elif x == '2':
             dot2bpseq(file_lines)
+        elif x == '3':
+            dot2xml(file_lines)
 
     if re.match(".*.ct", title):
         x = input('Wybierz format zapisu:' + '\n' + '0 - Wszystkie formaty' + '\n' + '1 - Format .dot' + '\n' + '2 - Format .bpseq' + '\n' + '3 - Format .RNAML' + '\n')
