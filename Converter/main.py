@@ -8,8 +8,7 @@ from rnaml_convert import rnaml2dot
 tmp = ''
 
 try:
-    with open('rnaml2bpseq_file') as file:
-        dupa = file
+    with open('okur') as file:
         file_lines = file.read().splitlines()
         title = file_lines[0]
     tmp = 'ok'
