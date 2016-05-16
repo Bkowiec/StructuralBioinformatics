@@ -67,9 +67,12 @@ def rnaml2bpseq():
         B.append(position[1].firstChild.nodeValue)
         i += 1
 
-    # Uzupełnienie tablicy B o potrzebne zera do metody dot_structure
+    # Uzupełnienie tablicy B o potrzebne zera do metody dot_structure i potem wstawi pary
     X = [0] * len(seq)
     for n, i in zip(A, B):
+        X[int(n) - 1] = int(i)
+# jezeli 2 i 10 to para to tez zapisze to jako 10 i 2
+    for n, i in zip(B, A):
         X[int(n) - 1] = int(i)
 
     # Odpowiednik tablicy A tylko cała jest uzupełniona
@@ -113,6 +116,9 @@ def rnaml2ct():
     for n, i in zip(A, B):
         X[int(n) - 1] = int(i)
 
+    for n, i in zip(B, A):
+        X[int(n) - 1] = int(i)
+
     # Odpowiednik tablicy A tylko cała jest uzupełniona
     Y = []
     for i in range(1, len(seq) + 1):
@@ -125,3 +131,5 @@ def rnaml2ct():
 
     with open('rnaml2ct_file', 'w') as f:
         new_file = f.write('\n'.join(output))
+
+

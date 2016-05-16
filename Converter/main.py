@@ -8,7 +8,7 @@ from rnaml_convert import rnaml2dot
 tmp = ''
 
 try:
-    with open('page.xml') as file:
+    with open('rnaml2bpseq_file') as file:
         dupa = file
         file_lines = file.read().splitlines()
         title = file_lines[0]
