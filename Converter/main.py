@@ -1,4 +1,5 @@
 import re
+import sys
 import os
 from bpseq_convert import bpseq2ct, bpseq2rnaml, bpseq2dot
 from ct_convert import ct2bpseq, ct2rnaml, ct2dot
@@ -14,7 +15,7 @@ dot = []
 bracket = []
 
 try:
-    with open('ct2rnaml.xml') as file:
+    with open(sys.argv[1]) as file:
         file_lines = file.read().splitlines()
         title = file_lines[0]
         file_name = file.name

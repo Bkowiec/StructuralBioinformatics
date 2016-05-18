@@ -291,5 +291,5 @@ def dot2rnaml(cts):
             position3.text = str(pairs.get(i, 0))
 
     tree = ET.ElementTree(rnaml)
-    tree.write("page.xml")
+    tree.write("dot2rnaml.xml")
     print("Conversion from (.dot) to (.xml) completed successfully!")
