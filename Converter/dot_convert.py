@@ -1,11 +1,15 @@
 import xml.etree.cElementTree as ET
+import re
 
-
-def dot2ct(file_lines):
-    title = file_lines[0]
-    title = title.replace('.dot', '')
-    seq = file_lines[1]
-    str = file_lines[2]
+def dot2ct(cts):
+    title = ">seq_name.ct"
+    seq = cts[0]
+    str = cts[1]
+    if re.match(r">.*.dot", cts[0]):
+        title = cts[0]
+        title = title.replace('.dot', '.ct')
+        seq = cts[1]
+        str = cts[2]
 
     ctstring = []
     stack1 = []
@@ -83,17 +87,21 @@ def dot2ct(file_lines):
             "%d%s%s%s%d%s%d%s%d%s%d" % (i, ' ', seq[i - 1], ' ', i - 1, ' ', i + 1, ' ', pairs.get(i, 0), ' ', i))
     # print(title)
     # print('\n'.join(ctstring))
-    print('Konwersja przebiegła poprawnie!')
 
     with open('dot2ct_file', 'w') as d:
-        new_file = d.write(title + '.ct' + '\n' + '\n'.join(ctstring))
+        new_file = d.write(title + '\n' + '\n'.join(ctstring))
+    print("Conversion from (.dot) to (.ct) completed successfully!")
 
 
-def dot2bpseq(file_lines):
-    title = file_lines[0]
-    title = title.replace('.dot', '')
-    seq = file_lines[1]
-    str = file_lines[2]
+def dot2bpseq(cts):
+    title = ">seq_name.ct"
+    seq = cts[0]
+    str = cts[1]
+    if re.match(r">.*.dot", cts[0]):
+        title = cts[0]
+        title = title.replace('.dot', '.bpseq')
+        seq = cts[1]
+        str = cts[2]
 
     ctstring = []
     stack1 = []
@@ -171,17 +179,21 @@ def dot2bpseq(file_lines):
         ctstring.append("%d%s%s%s%d" % (i, ' ', seq[i - 1], ' ', pairs.get(i, 0)))
     # print(title)
     # print('\n'.join(ctstring))
-    print('Konwersja przebiegła poprawnie!')
 
     with open('dot2bpseq_file', 'w') as d:
-        new_file = d.write(title + '.bpseq' + '\n' + '\n'.join(ctstring))
+        new_file = d.write(title + '\n' + '\n'.join(ctstring))
+    print("Conversion from (.dot) to (.bpseq) completed successfully!")
 
 
-def dot2xml(file_lines):
-    title = file_lines[0]
-    title = title.replace('.dot', '')
-    seq = file_lines[1]
-    pattern = file_lines[2]
+def dot2rnaml(cts):
+    title = "seq_name"
+    seq = cts[0]
+    pattern = cts[1]
+    if re.match(r">.*.dot", cts[0]):
+        title = cts[0]
+        title = title.replace('.dot', '').replace('>', '')
+        seq = cts[1]
+        pattern = cts[2]
 
     stack1 = []
     stack2 = []
@@ -266,7 +278,6 @@ def dot2xml(file_lines):
 
     for i in range(1, len(pattern) + 1):
         if i < pairs.get(i, 0):
-            print(i)
             base_pair = ET.SubElement(structure, "base-pair")
 
             basep5 = ET.SubElement(base_pair, "base-id-p5")
@@ -281,3 +292,4 @@ def dot2xml(file_lines):
 
     tree = ET.ElementTree(rnaml)
     tree.write("page.xml")
+    print("Conversion from (.dot) to (.xml) completed successfully!")

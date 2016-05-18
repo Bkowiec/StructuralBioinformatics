@@ -1,26 +1,39 @@
 import xml.etree.cElementTree as ET
 from dot_structure import dot_structure
-
+import re
 
 def bpseq2ct(cts):
-    title = cts[0]
-    title = title.replace('.bpseq', '')
+    title = ">seq_name.ct"
+    if re.match(r">.*.bpseq", cts[0]):
+        title = cts[0]
+        title = title.replace('.bpseq', '.ct')
 
     idx = 0
     string = []
-    for i in range(1, len(cts)):
-        line = cts[i].split()
+
+
+    input_form = []
+    for x in range(0, len(cts)):
+        if re.match("\s*\d+\s+[A-Z]\s+\d+(?!\s)", cts[x]):
+            input_form.append(cts[x])
+
+    for i in range(1, len(input_form)):
+        line = input_form[i].split()
         string.append(
             "%d%s%s%s%d%s%d%s%s%s%d" % (i, ' ', line[1], ' ', i - 1, ' ', i + 1, ' ', line[2], ' ', i))
     # print('\n'.join(string))
-    print('Konwersja przebiegła poprawnie!')
+
+
     with open('bpseq2ct_file', 'w') as d:
-        new_file = d.write(title + '.ct' + '\n' + '\n'.join(string))
+        new_file = d.write(title + '\n' + '\n'.join(string))
+    print("Conversion from (.bpseq) to (.ct) completed successfully!")
 
 
 def bpseq2dot(cts):
-    title = cts[0]
-    title = title.replace('.bpseq', '')
+    title = ">seq_name.dot"
+    if re.match(r">.*.bpseq", cts[0]):
+        title = cts[0]
+        title = title.replace('.bpseq', '.dot')
 
     A = []
     B = []
@@ -44,15 +57,17 @@ def bpseq2dot(cts):
 
     # print(seq)
     # print(''.join(s))
-    print('Konwersja przebiegła poprawnie!')
 
     with open('bpseq2dot_file', 'w') as d:
-        new_file = d.write(title + '.dot' + '\n' + seq + '\n' + ''.join(s))
+        new_file = d.write(title + '\n' + seq + '\n' + ''.join(s))
+    print("Conversion from (.bpseq) to (.dot) completed successfully!")
 
 
 def bpseq2rnaml(cts):
-    title = cts[0]
-    title = title.replace('.bpseq', '')
+    title = "seq_name"
+    if re.match(r">.*.bpseq", cts[0]):
+        title = cts[0]
+        title = title.replace('.bpseq', '').replace('>', '')
 
     A = []
     B = []
@@ -98,4 +113,5 @@ def bpseq2rnaml(cts):
             position3.text = str(b)
 
     tree = ET.ElementTree(rnaml)
-    tree.write("page.xml")
+    tree.write("bpseq2rnaml.xml")
+    print("Conversion from (.bpseq) to (.xml) completed successfully!")

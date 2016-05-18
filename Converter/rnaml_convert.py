@@ -37,12 +37,9 @@ def rnaml2dot():
 
     d = dot_structure(Y, X)
 
-    print(main_name)
-    print(seq)
-    print(''.join(d))
 
     with open('rnaml2dot_file', 'w') as f:
-        new_file = f.write(main_name + '\n' + seq + '\n' + ''.join(d))
+        new_file = f.write('>' + main_name + '.dot' + '\n' + seq + '\n' + ''.join(d))
 
 
 def rnaml2bpseq():
@@ -86,7 +83,7 @@ def rnaml2bpseq():
         output.append("%s%s%s%s%s" % (Y[i], ' ', seq[i], ' ', X[i]))
 
     with open('rnaml2bpseq_file', 'w') as f:
-        new_file = f.write('\n'.join(output))
+        new_file = f.write('>' + main_name + '.bpseq' + '\n' + '\n'.join(output))
 
 
 def rnaml2ct():
@@ -130,6 +127,7 @@ def rnaml2ct():
         output.append("%s%s%s%s%s%s%s%s%s%s%s" % (Y[i], ' ', seq[i], ' ', i, ' ', i + 2, ' ', X[i], ' ', Y[i]))
 
     with open('rnaml2ct_file', 'w') as f:
-        new_file = f.write('\n'.join(output))
+        new_file = f.write('>' + main_name + '.ct' + '\n' + '\n'.join(output))
+
 
 
