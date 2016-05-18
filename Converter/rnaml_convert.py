@@ -2,8 +2,8 @@ from xml.dom.minidom import parse
 from dot_structure import dot_structure
 
 
-def rnaml2dot():
-    cts = "page.xml"
+def rnaml2dot(name):
+    cts = name
     # Tworze sobie całe 'drzewo' informacji pliku xml
     dom = parse(cts)
     seq_data = dom.getElementsByTagName('seq-data')
@@ -37,13 +37,13 @@ def rnaml2dot():
 
     d = dot_structure(Y, X)
 
-
     with open('rnaml2dot_file', 'w') as f:
         new_file = f.write('>' + main_name + '.dot' + '\n' + seq + '\n' + ''.join(d))
+    print("Conversion from (rnaml) to (dot) completed successfully!")
 
 
-def rnaml2bpseq():
-    cts = "page.xml"  # Tworze sobie całe 'drzewo' informacji pliku xml
+def rnaml2bpseq(name):
+    cts = name  # Tworze sobie całe 'drzewo' informacji pliku xml
     dom = parse(cts)
     seq_data = dom.getElementsByTagName('seq-data')
     name = dom.getElementsByTagName('name')
@@ -68,7 +68,7 @@ def rnaml2bpseq():
     X = [0] * len(seq)
     for n, i in zip(A, B):
         X[int(n) - 1] = int(i)
-# jezeli 2 i 10 to para to tez zapisze to jako 10 i 2
+    # jezeli 2 i 10 to para to tez zapisze to jako 10 i 2
     for n, i in zip(B, A):
         X[int(n) - 1] = int(i)
 
@@ -84,10 +84,11 @@ def rnaml2bpseq():
 
     with open('rnaml2bpseq_file', 'w') as f:
         new_file = f.write('>' + main_name + '.bpseq' + '\n' + '\n'.join(output))
+    print("Conversion from (rnaml) to (bpseq) completed successfully!")
 
 
-def rnaml2ct():
-    cts = "page.xml"  # Tworze sobie całe 'drzewo' informacji pliku xml
+def rnaml2ct(name):
+    cts = name  # Tworze sobie całe 'drzewo' informacji pliku xml
     dom = parse(cts)
     seq_data = dom.getElementsByTagName('seq-data')
     name = dom.getElementsByTagName('name')
@@ -128,6 +129,4 @@ def rnaml2ct():
 
     with open('rnaml2ct_file', 'w') as f:
         new_file = f.write('>' + main_name + '.ct' + '\n' + '\n'.join(output))
-
-
-
+    print("Conversion from (rnaml) to (ct) completed successfully!")

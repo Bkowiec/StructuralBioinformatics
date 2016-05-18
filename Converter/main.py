@@ -3,9 +3,8 @@ import os
 from bpseq_convert import bpseq2ct, bpseq2rnaml, bpseq2dot
 from ct_convert import ct2bpseq, ct2rnaml, ct2dot
 from dot_convert import dot2ct, dot2bpseq, dot2rnaml
-from rnaml_convert import rnaml2dot
+from rnaml_convert import rnaml2dot, rnaml2bpseq, rnaml2ct
 
-tmp = ''
 connect = "\s*\d+\s+[A-Z]\s+\d+\s+\d+\s+\d+\s+\d+"
 base_pair = "\s*\d+\s+[A-Z]\s+\d+(?!\s)"
 dot_form = "[A-Z]+"
@@ -18,8 +17,23 @@ try:
     with open('ct2rnaml.xml') as file:
         file_lines = file.read().splitlines()
         title = file_lines[0]
+        file_name = file.name
 
-    if re.match(r">.*.(ct|bpseq|dot)", title):
+    if re.match(".*.xml", file_name):
+        x = input(
+            'Choose save format:' + '\n' + '0 - All formats' + '\n' + '1 - Connect (.ct)' + '\n' + '2 - Dot-bracket (.dot)' + '\n' + '3 - Basepair (.bpseq)' + '\n')
+
+        if x == '0':
+            rnaml2dot(file.name)
+            rnaml2bpseq(file.name)
+            rnaml2ct(file.name)
+        elif x == '1':
+            rnaml2ct(file.name)
+        elif x == '2':
+            rnaml2dot(file.name)
+        elif x == '3':
+            rnaml2bpseq(file.name)
+    elif re.match(r">.*.(ct|bpseq|dot)", title):
         if re.match(".*.dot", title):
             x = input(
                 'Choose save format:' + '\n' + '0 - All formats' + '\n' + '1 - Connect (.ct)' + '\n' + '2 - Basepair (.bpseq)' + '\n' + '3 - RNAML (.XML)' + '\n')
@@ -34,7 +48,6 @@ try:
                 dot2bpseq(file_lines)
             elif x == '3':
                 dot2rnaml(file_lines)
-
         if re.match("(.*.ct)", title):
             x = input(
                 'Choose save format:' + '\n' + '0 - All formats' + '\n' + '1 - Dot-bracket (.dot)' + '\n' + '2 - Basepair (.bpseq)' + '\n' + '3 - RNAML (.XML)' + '\n')
@@ -49,7 +62,6 @@ try:
                 ct2bpseq(file_lines)
             elif x == '3':
                 ct2rnaml(file_lines)
-
         if re.match(".*.bpseq", title):
             x = input(
                 'Choose save format:' + '\n' + '0 - All formats' + '\n' + '1 - Connect (.ct)' + '\n' + '2 - Dot-bracket (.dot)' + '\n' + '3 - RNAML (.XML)' + '\n')
@@ -64,20 +76,6 @@ try:
                 bpseq2dot(file_lines)
             elif x == '3':
                 bpseq2rnaml(file_lines)
-
-        if file.endswith('.xml'):
-            x = input(
-                'Choose save format:' + '\n' + '0 - All formats' + '\n' + '1 - Connect (.ct)' + '\n' + '2 - Dot-bracket (.dot)' + '\n' + '3 - Basepair (.bpseq)' + '\n')
-
-            if x == '0':
-                print(':)')
-            elif x == '1':
-                print(':)')
-            elif x == '2':
-                print(':)')
-            elif x == '3':
-                print(':)')
-
     else:
         if re.findall(connect, str(file_lines)):
             for x in range(0, len(file_lines)):
