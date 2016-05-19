@@ -17,10 +17,10 @@ def bpseq2ct(cts):
         if re.match("\s*\d+\s+[A-Z]\s+\d+(?!\s)", cts[x]):
             input_form.append(cts[x])
 
-    for i in range(1, len(input_form)):
+    for i in range(len(input_form)):
         line = input_form[i].split()
         string.append(
-            "%d%s%s%s%d%s%d%s%s%s%d" % (i, ' ', line[1], ' ', i - 1, ' ', i + 1, ' ', line[2], ' ', i))
+            "%d%s%s%s%d%s%d%s%s%s%d" % (i+1, ' ', line[1], ' ', i, ' ', i + 2, ' ', line[2], ' ', i+1))
     # print('\n'.join(string))
 
 
