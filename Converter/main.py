@@ -15,7 +15,7 @@ dot = []
 bracket = []
 
 try:
-    with open(sys.argv[1]) as file:
+    with open("LOL1") as file:
         file_lines = file.read().splitlines()
         title = file_lines[0]
         file_name = file.name
@@ -38,17 +38,19 @@ try:
         if re.match(".*.dot", title):
             x = input(
                 'Choose save format:' + '\n' + '0 - All formats' + '\n' + '1 - Connect (.ct)' + '\n' + '2 - Basepair (.bpseq)' + '\n' + '3 - RNAML (.XML)' + '\n')
-
-            if x == '0':
-                dot2ct(file_lines)
-                dot2bpseq(file_lines)
-                dot2rnaml(file_lines)
-            elif x == '1':
-                dot2ct(file_lines)
-            elif x == '2':
-                dot2bpseq(file_lines)
-            elif x == '3':
-                dot2rnaml(file_lines)
+            try:
+                if x == '0':
+                    dot2ct(file_lines)
+                    dot2bpseq(file_lines)
+                    dot2rnaml(file_lines)
+                elif x == '1':
+                    dot2ct(file_lines)
+                elif x == '2':
+                    dot2bpseq(file_lines)
+                elif x == '3':
+                    dot2rnaml(file_lines)
+            except:
+                print("Invalid input format")
         if re.match("(.*.ct)", title):
             x = input(
                 'Choose save format:' + '\n' + '0 - All formats' + '\n' + '1 - Dot-bracket (.dot)' + '\n' + '2 - Basepair (.bpseq)' + '\n' + '3 - RNAML (.XML)' + '\n')
@@ -127,16 +129,18 @@ try:
                     t += 1
             x = input(
                 'Choose save format:' + '\n' + '0 - All formats' + '\n' + '1 - Connect (.ct)' + '\n' + '2 - Basepair (.bpseq)' + '\n' + '3 - RNAML (.XML)' + '\n')
-
-            if x == '0':
-                dot2ct(input_form)
-                dot2bpseq(input_form)
-                dot2rnaml(input_form)
-            elif x == '1':
-                dot2ct(input_form)
-            elif x == '2':
-                dot2bpseq(input_form)
-            elif x == '3':
-                dot2rnaml(input_form)
+            try:
+                if x == '0':
+                    dot2ct(input_form)
+                    dot2bpseq(input_form)
+                    dot2rnaml(input_form)
+                elif x == '1':
+                    dot2ct(input_form)
+                elif x == '2':
+                    dot2bpseq(input_form)
+                elif x == '3':
+                    dot2rnaml(input_form)
+            except:
+                print("Invalid input format")
 except:
     print('File not found')
