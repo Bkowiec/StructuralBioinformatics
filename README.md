@@ -3,7 +3,7 @@ Program umożliwiający dowolną zmianę pomiędzy wybranymi notacjami struktur 
 
 # Obsługiwane formaty
 CT(connet), BPSEQ(basepair), DOT-BRACKET(vienna), RNAML(http://www-lbit.iro.umontreal.ca/rnaml/)<br/>
-Program umożliwia również obsługę rozpoznawanie pseudowęzłów do stopnia dziesiątego.
+Program umożliwia również obsługę rozpoznawania pseudowęzłów do rzędu dziesiątego.
 
 # Użycie
 Po uruchomieniu programu i wskazaniu mu wejściowego pliku, dla przykładu plik o nazwie ,first_seq,<br/>
@@ -73,7 +73,7 @@ Basepair:
 ```
 Dot-bracket:
 ```sh
->>first_seq.dot
+>first_seq.dot
 AGUCGCAUASKDSKALG
 .(.[.{.<.).].}.>.
 ```
