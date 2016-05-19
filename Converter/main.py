@@ -15,7 +15,7 @@ dot = []
 bracket = []
 
 try:
-    with open("LOL1") as file:
+    with open(sys.argv[1]) as file:
         file_lines = file.read().splitlines()
         title = file_lines[0]
         file_name = file.name
