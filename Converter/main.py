@@ -36,19 +36,33 @@ try:
             rnaml2bpseq(file.name)
     elif re.match(r">.*.(ct|bpseq|dot)", title):
         if re.match(".*.dot", title):
+
+            for x in range(0, len(file_lines)):
+                if re.match(dot_form, file_lines[x]):
+                    dot.append(re.match(dot_form, file_lines[x]).group())
+                elif re.match(bracket_form, file_lines[x]):
+                    bracket.append(re.match(bracket_form, file_lines[x]).group())
+            for x in dot:
+                t = 0
+                while t < len(bracket):
+                    if len(x) == len(bracket[t]):
+                        input_form.append(x)
+                        input_form.append(bracket[t])
+                    t += 1
+
             x = input(
                 'Choose save format:' + '\n' + '0 - All formats' + '\n' + '1 - Connect (.ct)' + '\n' + '2 - Basepair (.bpseq)' + '\n' + '3 - RNAML (.XML)' + '\n')
             try:
                 if x == '0':
-                    dot2ct(file_lines)
-                    dot2bpseq(file_lines)
-                    dot2rnaml(file_lines)
+                    dot2ct(input_form)
+                    dot2bpseq(input_form)
+                    dot2rnaml(input_form)
                 elif x == '1':
-                    dot2ct(file_lines)
+                    dot2ct(input_form)
                 elif x == '2':
-                    dot2bpseq(file_lines)
+                    dot2bpseq(input_form)
                 elif x == '3':
-                    dot2rnaml(file_lines)
+                    dot2rnaml(input_form)
             except:
                 print("Invalid input format")
         if re.match("(.*.ct)", title):
