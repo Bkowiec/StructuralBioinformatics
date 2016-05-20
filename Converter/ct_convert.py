@@ -33,7 +33,7 @@ def ct2dot(cts):
 
     with open('ct2dot_file', 'w') as d:
         new_file = d.write(title + '\n' + seq + '\n' + ''.join(s))
-    print("Conversion from (.ct) to (.dot) completed successfully!")
+    print("Conversion from (ct) to (dot) completed successfully!")
 
 
 def ct2rnaml(cts):
@@ -87,7 +87,7 @@ def ct2rnaml(cts):
 
     tree = ET.ElementTree(rnaml)
     tree.write("ct2rnaml.xml")
-    print("Conversion from (.ct) to (.xml) completed successfully!")
+    print("Conversion from (ct) to (rnaml) completed successfully!")
 
 
 def ct2bpseq(cts):
@@ -108,4 +108,4 @@ def ct2bpseq(cts):
 
     with open('ct2bpseq_file', 'w') as d:
         new_file = d.write(title + '\n' + '\n'.join(string))
-    print("Conversion from (.ct) to (.bpseq) completed successfully!")
+    print("Conversion from (ct) to (bpseq) completed successfully!")

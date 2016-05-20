@@ -26,7 +26,7 @@ def bpseq2ct(cts):
 
     with open('bpseq2ct_file', 'w') as d:
         new_file = d.write(title + '\n' + '\n'.join(string))
-    print("Conversion from (.bpseq) to (.ct) completed successfully!")
+    print("Conversion from (bpseq) to (ct) completed successfully!")
 
 
 def bpseq2dot(cts):
@@ -60,7 +60,7 @@ def bpseq2dot(cts):
 
     with open('bpseq2dot_file', 'w') as d:
         new_file = d.write(title + '\n' + seq + '\n' + ''.join(s))
-    print("Conversion from (.bpseq) to (.dot) completed successfully!")
+    print("Conversion from (bpseq) to (dot) completed successfully!")
 
 
 def bpseq2rnaml(cts):
@@ -114,4 +114,4 @@ def bpseq2rnaml(cts):
 
     tree = ET.ElementTree(rnaml)
     tree.write("bpseq2rnaml.xml")
-    print("Conversion from (.bpseq) to (.xml) completed successfully!")
+    print("Conversion from (bpseq) to (rnaml) completed successfully!")
