@@ -83,7 +83,7 @@ try:
         if re.findall(connect, str(file_lines)):
             for x in range(0, len(file_lines)):
                 if re.match(connect, file_lines[x]):
-                    input_form.append(file_lines[x])
+                    input_form.append(re.match(connect, file_lines[x]).group())
             x = input(
                 'Choose save format:' + '\n' + '0 - All formats' + '\n' + '1 - Dot-bracket (.dot)' + '\n' + '2 - Basepair (.bpseq)' + '\n' + '3 - RNAML (.XML)' + '\n')
 
@@ -100,7 +100,7 @@ try:
         elif re.findall(base_pair, str(file_lines)):
             for x in range(0, len(file_lines)):
                 if re.match(base_pair, file_lines[x]):
-                    input_form.append(file_lines[x])
+                    input_form.append(re.match(base_pair, file_lines[x]).group())
             x = input(
                 'Choose save format:' + '\n' + '0 - All formats' + '\n' + '1 - Connect (.ct)' + '\n' + '2 - Dot-bracket (.dot)' + '\n' + '3 - RNAML (.XML)' + '\n')
 
@@ -117,9 +117,9 @@ try:
         elif re.findall(bracket_form, str(file_lines)):
             for x in range(0, len(file_lines)):
                 if re.match(dot_form, file_lines[x]):
-                    dot.append(file_lines[x])
+                    dot.append(re.match(dot_form, file_lines[x]).group())
                 elif re.match(bracket_form, file_lines[x]):
-                    bracket.append(file_lines[x])
+                    bracket.append(re.match(bracket_form, file_lines[x]).group())
             for x in dot:
                 t = 0
                 while t < len(bracket):
