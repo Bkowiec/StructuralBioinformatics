@@ -94,7 +94,7 @@ def dot2ct(cts):
 
 
 def dot2bpseq(cts):
-    title = ">seq_name.ct"
+    title = ">seq_name.bpseq"
     seq = cts[0]
     str = cts[1]
     if re.match(r">.*.dot", cts[0]):
