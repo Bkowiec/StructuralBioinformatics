@@ -9,7 +9,7 @@ from rnaml_convert import rnaml2dot, rnaml2bpseq, rnaml2ct
 connect = "\s*\d+\s+[A-Z]\s+\d+\s+\d+\s+\d+\s+\d+"
 base_pair = "\s*\d+\s+[A-Z]\s+\d+(?!\s)"
 dot_form = "[A-Z]+"
-bracket_form = "[\.\<\[\{\(\)\>\]\}]+"
+bracket_form = "[\.\<\[\{\(\)\>\]\}ABCDEFGabcdefg]+"
 input_form = []
 dot = []
 bracket = []
