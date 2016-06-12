@@ -2,7 +2,7 @@ import xml.etree.cElementTree as ET
 import re
 
 
-def dot2ct(cts, input_title):
+def dot2ct(cts, input_title, file_name):
 
     if re.match(">.*.dot", input_title[0]):
         title = input_title[0]
@@ -90,12 +90,12 @@ def dot2ct(cts, input_title):
     # print(title)
     # print('\n'.join(ctstring))
 
-    with open('dot2ct_file', 'w') as d:
+    with open(file_name + '(ct)', 'w') as d:
         new_file = d.write(title + '\n' + '\n'.join(ctstring))
     print("Conversion from (dot) to (ct) completed successfully!")
 
 
-def dot2bpseq(cts, input_title):
+def dot2bpseq(cts, input_title, file_name):
     if re.match(">.*.dot", input_title[0]):
         title = input_title[0]
         title = title.replace('.dot', '.bpseq')
@@ -182,12 +182,12 @@ def dot2bpseq(cts, input_title):
     # print(title)
     # print('\n'.join(ctstring))
 
-    with open('dot2bpseq_file', 'w') as d:
+    with open(file_name + '(bpseq)', 'w') as d:
         new_file = d.write(title + '\n' + '\n'.join(ctstring))
     print("Conversion from (dot) to (bpseq) completed successfully!")
 
 
-def dot2rnaml(cts, input_title):
+def dot2rnaml(cts, input_title, file_name):
     if re.match(">.*.dot", input_title[0]):
         title = input_title[0]
         title = title.replace('.dot', '').replace('>', '')
@@ -293,5 +293,5 @@ def dot2rnaml(cts, input_title):
             position3.text = str(pairs.get(i, 0))
 
     tree = ET.ElementTree(rnaml)
-    tree.write("dot2rnaml.xml")
+    tree.write(file_name + ".xml")
     print("Conversion from (dot) to (rnaml) completed successfully!")

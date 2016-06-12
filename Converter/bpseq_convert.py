@@ -2,7 +2,7 @@ import xml.etree.cElementTree as ET
 from dot_structure import dot_structure
 import re
 
-def bpseq2ct(cts, input_title):
+def bpseq2ct(cts, input_title, file_name):
     if re.match(">.*.bpseq", input_title[0]):
         title = input_title[0]
         title = title.replace('.bpseq', '.ct')
@@ -24,12 +24,12 @@ def bpseq2ct(cts, input_title):
     # print('\n'.join(string))
 
 
-    with open('bpseq2ct_file', 'w') as d:
+    with open(file_name + '(ct)', 'w') as d:
         new_file = d.write(title + '\n' + '\n'.join(string))
     print("Conversion from (bpseq) to (ct) completed successfully!")
 
 
-def bpseq2dot(cts, input_title):
+def bpseq2dot(cts, input_title, file_name):
     if re.match(">.*.bpseq", input_title[0]):
         title = input_title[0]
         title = title.replace('.bpseq', '.dot')
@@ -59,12 +59,12 @@ def bpseq2dot(cts, input_title):
     # print(seq)
     # print(''.join(s))
 
-    with open('bpseq2dot_file', 'w') as d:
+    with open(file_name + '(dot)', 'w') as d:
         new_file = d.write(title + '\n' + seq + '\n' + ''.join(s))
     print("Conversion from (bpseq) to (dot) completed successfully!")
 
 
-def bpseq2rnaml(cts, input_title):
+def bpseq2rnaml(cts, input_title, file_name):
     if re.match(">.*.bpseq", input_title[0]):
         title = input_title[0]
         title = title.replace('.bpseq', '').replace('>', '')
@@ -115,5 +115,5 @@ def bpseq2rnaml(cts, input_title):
             position3.text = str(b)
 
     tree = ET.ElementTree(rnaml)
-    tree.write("bpseq2rnaml.xml")
+    tree.write(file_name + ".xml")
     print("Conversion from (bpseq) to (rnaml) completed successfully!")

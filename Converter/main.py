@@ -46,15 +46,15 @@ try:
                 'Choose save format:' + '\n' + '0 - All formats' + '\n' + '1 - Dot-bracket (.dot)' + '\n' + '2 - Basepair (.bpseq)' + '\n' + '3 - RNAML (.XML)' + '\n')
 
             if x == '0':
-                ct2dot(file_lines, title)
-                ct2bpseq(file_lines, title)
-                ct2rnaml(file_lines, title)
+                ct2dot(file_lines, title, file_name)
+                ct2bpseq(file_lines, title, file_name)
+                ct2rnaml(file_lines, title, file_name)
             elif x == '1':
-                ct2dot(file_lines, title)
+                ct2dot(file_lines, title, file_name)
             elif x == '2':
-                ct2bpseq(file_lines, title)
+                ct2bpseq(file_lines, title, file_name)
             elif x == '3':
-                ct2rnaml(file_lines, title)
+                ct2rnaml(file_lines, title, file_name)
         elif re.findall(base_pair, str(file_lines)):
             for x in range(0, len(file_lines)):
                 if re.match(base_pair, file_lines[x]):
@@ -63,15 +63,15 @@ try:
                 'Choose save format:' + '\n' + '0 - All formats' + '\n' + '1 - Connect (.ct)' + '\n' + '2 - Dot-bracket (.dot)' + '\n' + '3 - RNAML (.XML)' + '\n')
 
             if x == '0':
-                bpseq2dot(input_form, title)
-                bpseq2ct(input_form, title)
-                bpseq2rnaml(input_form, title)
+                bpseq2dot(input_form, title, file_name)
+                bpseq2ct(input_form, title, file_name)
+                bpseq2rnaml(input_form, title, file_name)
             elif x == '1':
-                bpseq2ct(input_form, title)
+                bpseq2ct(input_form, title, file_name)
             elif x == '2':
-                bpseq2dot(input_form, title)
+                bpseq2dot(input_form, title, file_name)
             elif x == '3':
-                bpseq2rnaml(input_form, title)
+                bpseq2rnaml(input_form, title, file_name)
         elif re.findall(bracket_form, str(file_lines)):
             for x in range(0, len(file_lines)):
                 if re.match(dot_form, file_lines[x]):
@@ -89,15 +89,15 @@ try:
                 'Choose save format:' + '\n' + '0 - All formats' + '\n' + '1 - Connect (.ct)' + '\n' + '2 - Basepair (.bpseq)' + '\n' + '3 - RNAML (.XML)' + '\n')
             try:
                 if x == '0':
-                    dot2ct(input_form, title)
-                    dot2bpseq(input_form, title)
-                    dot2rnaml(input_form, title)
+                    dot2ct(input_form, title, file_name)
+                    dot2bpseq(input_form, title, file_name)
+                    dot2rnaml(input_form, title, file_name)
                 elif x == '1':
-                    dot2ct(input_form, title)
+                    dot2ct(input_form, title, file_name)
                 elif x == '2':
-                    dot2bpseq(input_form, title)
+                    dot2bpseq(input_form, title, file_name)
                 elif x == '3':
-                    dot2rnaml(input_form, title)
+                    dot2rnaml(input_form, title, file_name)
             except:
                 print("Invalid input format")
 except:
