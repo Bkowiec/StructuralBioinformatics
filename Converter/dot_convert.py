@@ -1,15 +1,17 @@
 import xml.etree.cElementTree as ET
 import re
 
-def dot2ct(cts):
-    title = ">seq_name.ct"
-    seq = cts[0]
-    str = cts[1]
-    if re.match(r">.*.dot", cts[0]):
-        title = cts[0]
+
+def dot2ct(cts, input_title):
+
+    if re.match(">.*.dot", input_title[0]):
+        title = input_title[0]
         title = title.replace('.dot', '.ct')
-        seq = cts[1]
-        str = cts[2]
+    else:
+        title = ">seq_name.ct"
+
+    seq = cts[0]
+    pattern = cts[1]
 
     ctstring = []
     stack1 = []
@@ -25,7 +27,7 @@ def dot2ct(cts):
     stack11 = []
     pairs = {}
 
-    for i, c in enumerate(str):
+    for i, c in enumerate(pattern):
         if c == '(':
             stack1.append(i + 1)
         elif c == '[':
@@ -82,7 +84,7 @@ def dot2ct(cts):
             pairs[i + 1] = stack11.pop()
             pairs[pairs[i + 1]] = i + 1
 
-    for i in range(1, len(str) + 1):
+    for i in range(1, len(pattern) + 1):
         ctstring.append(
             "%d%s%s%s%d%s%d%s%d%s%d" % (i, ' ', seq[i - 1], ' ', i - 1, ' ', i + 1, ' ', pairs.get(i, 0), ' ', i))
     # print(title)
@@ -93,15 +95,15 @@ def dot2ct(cts):
     print("Conversion from (dot) to (ct) completed successfully!")
 
 
-def dot2bpseq(cts):
-    title = ">seq_name.bpseq"
-    seq = cts[0]
-    str = cts[1]
-    if re.match(r">.*.dot", cts[0]):
-        title = cts[0]
+def dot2bpseq(cts, input_title):
+    if re.match(">.*.dot", input_title[0]):
+        title = input_title[0]
         title = title.replace('.dot', '.bpseq')
-        seq = cts[1]
-        str = cts[2]
+    else:
+        title = ">seq_name.bpseq"
+
+    seq = cts[0]
+    pattern = cts[1]
 
     ctstring = []
     stack1 = []
@@ -118,7 +120,7 @@ def dot2bpseq(cts):
 
     pairs = {}
 
-    for i, c in enumerate(str):
+    for i, c in enumerate(pattern):
         if c == '(':
             stack1.append(i + 1)
         elif c == '[':
@@ -175,7 +177,7 @@ def dot2bpseq(cts):
             pairs[i + 1] = stack11.pop()
             pairs[pairs[i + 1]] = i + 1
 
-    for i in range(1, len(str) + 1):
+    for i in range(1, len(pattern) + 1):
         ctstring.append("%d%s%s%s%d" % (i, ' ', seq[i - 1], ' ', pairs.get(i, 0)))
     # print(title)
     # print('\n'.join(ctstring))
@@ -185,15 +187,15 @@ def dot2bpseq(cts):
     print("Conversion from (dot) to (bpseq) completed successfully!")
 
 
-def dot2rnaml(cts):
-    title = "seq_name"
+def dot2rnaml(cts, input_title):
+    if re.match(">.*.dot", input_title[0]):
+        title = input_title[0]
+        title = title.replace('.dot', '').replace('>', '')
+    else:
+        title = "seq_name"
+
     seq = cts[0]
     pattern = cts[1]
-    if re.match(r">.*.dot", cts[0]):
-        title = cts[0]
-        title = title.replace('.dot', '').replace('>', '')
-        seq = cts[1]
-        pattern = cts[2]
 
     stack1 = []
     stack2 = []

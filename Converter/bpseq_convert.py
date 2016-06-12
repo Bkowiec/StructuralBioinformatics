@@ -2,12 +2,12 @@ import xml.etree.cElementTree as ET
 from dot_structure import dot_structure
 import re
 
-def bpseq2ct(cts):
-    title = ">seq_name.ct"
-    if re.match(r">.*.bpseq", cts[0]):
-        title = cts[0]
+def bpseq2ct(cts, input_title):
+    if re.match(">.*.bpseq", input_title[0]):
+        title = input_title[0]
         title = title.replace('.bpseq', '.ct')
-
+    else:
+        title = ">seq_name.ct"
     idx = 0
     string = []
 
@@ -29,11 +29,12 @@ def bpseq2ct(cts):
     print("Conversion from (bpseq) to (ct) completed successfully!")
 
 
-def bpseq2dot(cts):
-    title = ">seq_name.dot"
-    if re.match(r">.*.bpseq", cts[0]):
-        title = cts[0]
+def bpseq2dot(cts, input_title):
+    if re.match(">.*.bpseq", input_title[0]):
+        title = input_title[0]
         title = title.replace('.bpseq', '.dot')
+    else:
+        title = ">seq_name.dot"
 
     A = []
     B = []
@@ -63,11 +64,12 @@ def bpseq2dot(cts):
     print("Conversion from (bpseq) to (dot) completed successfully!")
 
 
-def bpseq2rnaml(cts):
-    title = "seq_name"
-    if re.match(r">.*.bpseq", cts[0]):
-        title = cts[0]
+def bpseq2rnaml(cts, input_title):
+    if re.match(">.*.bpseq", input_title[0]):
+        title = input_title[0]
         title = title.replace('.bpseq', '').replace('>', '')
+    else:
+        title = "seq_name"
 
     A = []
     B = []

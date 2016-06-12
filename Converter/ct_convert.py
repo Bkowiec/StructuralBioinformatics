@@ -2,11 +2,15 @@ from dot_structure import dot_structure
 import xml.etree.cElementTree as ET
 import re
 
-def ct2dot(cts):
-    title = ">seq_name.dot"
-    if re.match(r">.*.ct", cts[0]):
-        title = cts[0]
+def ct2dot(cts, input_title):
+
+
+    if re.match(">.*.ct", input_title[0]):
+        title = input_title[0]
         title = title.replace('.ct', '.dot')
+    else:
+        title = ">seq_name.dot"
+
 
     A = []
     B = []
@@ -36,11 +40,13 @@ def ct2dot(cts):
     print("Conversion from (ct) to (dot) completed successfully!")
 
 
-def ct2rnaml(cts):
-    title = "seq_name"
-    if re.match(r">.*.ct", cts[0]):
-        title = cts[0]
+def ct2rnaml(cts, input_title):
+    if re.match(">.*.ct", input_title[0]):
+        title = input_title[0]
         title = title.replace('.ct', '').replace('>', '')
+    else:
+        title = "seq_name"
+
 
     A = []
     B = []
@@ -90,11 +96,12 @@ def ct2rnaml(cts):
     print("Conversion from (ct) to (rnaml) completed successfully!")
 
 
-def ct2bpseq(cts):
-    title = ">seq_name.bpseq"
-    if re.match(r">.*.ct", cts[0]):
-        title = cts[0]
+def ct2bpseq(cts, input_title):
+    if re.match(">.*.ct", input_title[0]):
+        title = input_title[0]
         title = title.replace('.ct', '.bpseq')
+    else:
+        title = ">seq_name.bpseq"
 
     idx = 0
     string = []
