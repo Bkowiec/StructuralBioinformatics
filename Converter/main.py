@@ -5,10 +5,11 @@ from bpseq_convert import bpseq2ct, bpseq2rnaml, bpseq2dot
 from ct_convert import ct2bpseq, ct2rnaml, ct2dot
 from dot_convert import dot2ct, dot2bpseq, dot2rnaml
 from rnaml_convert import rnaml2dot, rnaml2bpseq, rnaml2ct
+from multi import multil
 
 connect = "\s*\d+\s+[A-Z]\s+\d+\s+\d+\s+\d+\s+\d+"
 base_pair = "\s*\d+\s+[A-Z]\s+\d+(?!\s)"
-dot_form = "[A-Z]+"
+dot_form = "[AUCG]+"
 bracket_form = "[\.\<\[\{\(\)\>\]\}ABCDEFGabcdefg]+"
 title_form = "(>{1}.*(?:.dot|.ct|.bpseq))"
 input_form = []
@@ -85,19 +86,23 @@ try:
                         input_form.append(x)
                         input_form.append(bracket[t])
                     t += 1
-            x = input(
-                'Choose save format:' + '\n' + '0 - All formats' + '\n' + '1 - Connect (.ct)' + '\n' + '2 - Basepair (.bpseq)' + '\n' + '3 - RNAML (.XML)' + '\n')
+            y = input('Multiline (y/n)?' + '\n')
             try:
-                if x == '0':
-                    dot2ct(input_form, title, file_name)
-                    dot2bpseq(input_form, title, file_name)
-                    dot2rnaml(input_form, title, file_name)
-                elif x == '1':
-                    dot2ct(input_form, title, file_name)
-                elif x == '2':
-                    dot2bpseq(input_form, title, file_name)
-                elif x == '3':
-                    dot2rnaml(input_form, title, file_name)
+                if y == 'y':
+                    multil(file_lines, title, file_name)
+                else:
+                    x = input(
+                        'Choose save format:' + '\n' + '0 - All formats' + '\n' + '1 - Connect (.ct)' + '\n' + '2 - Basepair (.bpseq)' + '\n' + '3 - RNAML (.XML)' + '\n')
+                    if x == '0':
+                        dot2ct(input_form, title, file_name)
+                        dot2bpseq(input_form, title, file_name)
+                        dot2rnaml(input_form, title, file_name)
+                    elif x == '1':
+                        dot2ct(input_form, title, file_name)
+                    elif x == '2':
+                        dot2bpseq(input_form, title, file_name)
+                    elif x == '3':
+                        dot2rnaml(input_form, title, file_name)
             except:
                 print("Invalid input format")
 except:
