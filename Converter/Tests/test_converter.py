@@ -15,7 +15,7 @@ class DotConverterTests(unittest.TestCase):
             "CAGCACGACACUAGCAGUCAGUGUCAGACUGCAGACAGCACGACACUAGCAGUCAGUGUCAGACUGCAGACAGCACGACACUAGCAGUCAGUGUCAGACUGCAGA",
             "..(((((...(((((...(((((...(((((.....)))))...))))).....(((((...(((((.....)))))...))))).....)))))...))))).."
         ]
-        file_1 = open("3(ct)").read()
+        file_1 = open("seq3(ct)").read()
         dot2ct(cts, title, file_path)
         file_path += "(ct)"
         file_2 = open("seq-test(ct)").read()
@@ -30,7 +30,7 @@ class DotConverterTests(unittest.TestCase):
             "CAGCACGACACUAGCAGUCAGUGUCAGACUGCAGACAGCACGACACUAGCAGUCAGUGUCAGACUGCAGACAGCACGACACUAGCAGUCAGUGUCAGACUGCAGA",
             "..(((((...(((((...(((((...(((((.....)))))...))))).....(((((...(((((.....)))))...))))).....)))))...))))).."
         ]
-        file_1 = open("3(bpseq)").read()
+        file_1 = open("seq3(bpseq)").read()
         dot2bpseq(cts, title, file_path)
         file_path += "(bpseq)"
         file_2 = open("seq-test(bpseq)").read()
@@ -45,7 +45,7 @@ class DotConverterTests(unittest.TestCase):
             "CAGCACGACACUAGCAGUCAGUGUCAGACUGCAGACAGCACGACACUAGCAGUCAGUGUCAGACUGCAGACAGCACGACACUAGCAGUCAGUGUCAGACUGCAGA",
             "..(((((...(((((...(((((...(((((.....)))))...))))).....(((((...(((((.....)))))...))))).....)))))...))))).."
         ]
-        file_1 = open("3.xml").read()
+        file_1 = open("seq3.xml").read()
         dot2rnaml(cts, title, file_path)
         file_path += ".xml"
         file_2 = open("seq-test.xml").read()
@@ -123,7 +123,7 @@ class CtConverterTests(unittest.TestCase):
             "16 A 15 17 8 16",
             "17 C 16 18 0 17"
         ]
-        file_1 = open("2(dot)").read()
+        file_1 = open("seq2(dot)").read()
         ct2dot(cts, title, file_path)
         file_path += "(dot)"
         file_2 = open("seq-test(dot)").read()
@@ -153,7 +153,7 @@ class CtConverterTests(unittest.TestCase):
             "16 A 15 17 8 16",
             "17 C 16 18 0 17"
         ]
-        file_1 = open("2(bpseq)").read()
+        file_1 = open("seq2(bpseq)").read()
         ct2bpseq(cts, title, file_path)
         file_path += "(bpseq)"
         file_2 = open("seq-test(bpseq)").read()
@@ -183,7 +183,7 @@ class CtConverterTests(unittest.TestCase):
             "16 A 15 17 8 16",
             "17 C 16 18 0 17"
         ]
-        file_1 = open("2.xml").read()
+        file_1 = open("seq2.xml").read()
         ct2rnaml(cts, title, file_path)
         file_path += ".xml"
         file_2 = open("seq-test.xml").read()
@@ -240,7 +240,7 @@ class BpseqConverterTests(unittest.TestCase):
             "16 A 8",
             "17 C 0"
         ]
-        file_1 = open("1(dot)").read()
+        file_1 = open("seq1(dot)").read()
         bpseq2dot(cts, title, file_path)
         file_path += "(dot)"
         file_2 = open("seq-test(dot)").read()
@@ -270,7 +270,7 @@ class BpseqConverterTests(unittest.TestCase):
             "16 A 8",
             "17 C 0"
         ]
-        file_1 = open("1(ct)").read()
+        file_1 = open("seq1(ct)").read()
         bpseq2ct(cts, title, file_path)
         file_path += "(ct)"
         file_2 = open("seq-test(ct)").read()
@@ -300,7 +300,7 @@ class BpseqConverterTests(unittest.TestCase):
             "16 A 8",
             "17 C 0"
         ]
-        file_1 = open("1.xml").read()
+        file_1 = open("seq1.xml").read()
         bpseq2rnaml(cts, title, file_path)
         file_path += ".xml"
         file_2 = open("seq-test.xml").read()

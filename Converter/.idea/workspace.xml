@@ -3,7 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="5a728a30-f824-4f37-9bbb-bfab79a50f40" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rnaml_convert.py" afterPath="$PROJECT_DIR$/rnaml_convert.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tests/test_converter.py" afterPath="$PROJECT_DIR$/Tests/test_converter.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Tests/1(ct)" afterPath="$PROJECT_DIR$/Tests/seq2(ct)" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Tests/1(dot)" afterPath="$PROJECT_DIR$/Tests/seq2(dot)" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Tests/1.xml" afterPath="$PROJECT_DIR$/Tests/seq1.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Tests/2(bpseq)" afterPath="$PROJECT_DIR$/Tests/seq2(bpseq)" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Tests/2(ct)" afterPath="$PROJECT_DIR$/Tests/seq1(ct)" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Tests/2(dot)" afterPath="$PROJECT_DIR$/Tests/seq1(dot)" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Tests/3(bpseq)" afterPath="$PROJECT_DIR$/Tests/seq3(bpseq)" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Tests/3(ct)" afterPath="$PROJECT_DIR$/Tests/seq3(ct)" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Tests/3.xml" afterPath="$PROJECT_DIR$/Tests/seq3.xml" />
     </list>
     <ignored path="Converter.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,106 +40,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ct_convert.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ct_convert.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2074">
-              <caret line="124" column="35" selection-start-line="124" selection-start-column="35" selection-end-line="124" selection-end-column="35" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dot_structure.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dot_structure.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="24" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bpseq_convert.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bpseq_convert.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-                <element signature="e#134#1019#0" expanded="false" />
-                <element signature="e#1070#2090#0" expanded="false" />
-                <element signature="e#2143#4060#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test_converter.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="test_converter.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Tests/test_converter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="99" column="40" selection-start-line="99" selection-start-column="40" selection-end-line="99" selection-end-column="40" />
+            <state relative-caret-position="340">
+              <caret line="280" column="31" selection-start-line="280" selection-start-column="31" selection-end-line="280" selection-end-column="31" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
-                <element signature="e#380#979#0" expanded="false" />
-                <element signature="e#1019#1630#0" expanded="false" />
-                <element signature="e#1670#2272#0" expanded="false" />
-                <element signature="e#2313#2710#0" expanded="false" />
-                <element signature="e#2752#3731#0" expanded="false" />
-                <element signature="e#3781#7163#0" expanded="false" />
-                <element signature="e#3812#4665#0" expanded="false" />
-                <element signature="e#4704#5565#0" expanded="false" />
-                <element signature="e#5604#6456#0" expanded="false" />
-                <element signature="e#6497#7163#0" expanded="false" />
-                <element signature="e#7216#10108#0" expanded="false" />
-                <element signature="e#7250#7983#0" expanded="false" />
-                <element signature="e#8022#8751#0" expanded="false" />
-                <element signature="e#8793#9525#0" expanded="false" />
-                <element signature="e#9569#10108#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rnaml_convert.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/rnaml_convert.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="132" column="22" selection-start-line="132" selection-start-column="22" selection-end-line="132" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#33#0" expanded="true" />
-                <element signature="e#101#1432#0" expanded="false" />
-                <element signature="e#1462#3014#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dot_convert.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dot_convert.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="304" column="37" selection-start-line="304" selection-start-column="37" selection-end-line="304" selection-end-column="37" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-                <element signature="e#93#3093#0" expanded="false" />
-                <element signature="e#3144#6096#0" expanded="false" />
-                <element signature="e#6147#9927#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1666">
-              <caret line="105" column="12" selection-start-line="105" selection-start-column="12" selection-end-line="106" selection-end-column="45" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#349#3740#0" expanded="false" />
+                <element signature="e#380#982#0" expanded="false" />
+                <element signature="e#1022#1636#0" expanded="false" />
+                <element signature="e#1676#2281#0" expanded="false" />
+                <element signature="e#2322#2719#0" expanded="false" />
+                <element signature="e#2761#3740#0" expanded="false" />
+                <element signature="e#3790#7181#0" expanded="false" />
+                <element signature="e#3821#4677#0" expanded="false" />
+                <element signature="e#4716#5580#0" expanded="false" />
+                <element signature="e#5619#6474#0" expanded="false" />
+                <element signature="e#6515#7181#0" expanded="false" />
+                <element signature="e#7268#8004#0" expanded="false" />
+                <element signature="e#8043#8775#0" expanded="false" />
+                <element signature="e#8817#9552#0" expanded="false" />
+                <element signature="e#9596#10135#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -149,8 +80,8 @@
         <option value="$PROJECT_DIR$/ct_convert.py" />
         <option value="$PROJECT_DIR$/dot_structure.py" />
         <option value="$PROJECT_DIR$/bpseq_convert.py" />
-        <option value="$PROJECT_DIR$/Tests/test_converter.py" />
         <option value="$PROJECT_DIR$/rnaml_convert.py" />
+        <option value="$PROJECT_DIR$/Tests/test_converter.py" />
       </list>
     </option>
   </component>
@@ -632,7 +563,9 @@
     <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -673,21 +606,21 @@
           <caret line="99" column="40" selection-start-line="99" selection-start-column="40" selection-end-line="99" selection-end-column="40" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#380#979#0" expanded="false" />
-            <element signature="e#1019#1630#0" expanded="false" />
-            <element signature="e#1670#2272#0" expanded="false" />
-            <element signature="e#2313#2710#0" expanded="false" />
-            <element signature="e#2752#3731#0" expanded="false" />
-            <element signature="e#3781#7163#0" expanded="false" />
-            <element signature="e#3812#4665#0" expanded="false" />
-            <element signature="e#4704#5565#0" expanded="false" />
-            <element signature="e#5604#6456#0" expanded="false" />
-            <element signature="e#6497#7163#0" expanded="false" />
-            <element signature="e#7216#10108#0" expanded="false" />
-            <element signature="e#7250#7983#0" expanded="false" />
-            <element signature="e#8022#8751#0" expanded="false" />
-            <element signature="e#8793#9525#0" expanded="false" />
-            <element signature="e#9569#10108#0" expanded="false" />
+            <element signature="e#349#3740#0" expanded="false" />
+            <element signature="e#380#982#0" expanded="false" />
+            <element signature="e#1022#1636#0" expanded="false" />
+            <element signature="e#1676#2281#0" expanded="false" />
+            <element signature="e#2322#2719#0" expanded="false" />
+            <element signature="e#2761#3740#0" expanded="false" />
+            <element signature="e#3790#7181#0" expanded="false" />
+            <element signature="e#3821#4677#0" expanded="false" />
+            <element signature="e#4716#5580#0" expanded="false" />
+            <element signature="e#5619#6474#0" expanded="false" />
+            <element signature="e#6515#7181#0" expanded="false" />
+            <element signature="e#7268#8004#0" expanded="false" />
+            <element signature="e#8043#8775#0" expanded="false" />
+            <element signature="e#8817#9552#0" expanded="false" />
+            <element signature="e#9596#10135#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1075,19 +1008,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dot_convert.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="304" column="37" selection-start-line="304" selection-start-column="37" selection-end-line="304" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-            <element signature="e#93#3093#0" expanded="false" />
-            <element signature="e#3144#6096#0" expanded="false" />
-            <element signature="e#6147#9927#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ct_convert.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2074">
@@ -1119,34 +1039,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/test_converter.py">
+    <entry file="file://$PROJECT_DIR$/rnaml_convert.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="99" column="40" selection-start-line="99" selection-start-column="40" selection-end-line="99" selection-end-column="40" />
+        <state relative-caret-position="256">
+          <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#380#979#0" expanded="false" />
-            <element signature="e#1019#1630#0" expanded="false" />
-            <element signature="e#1670#2272#0" expanded="false" />
-            <element signature="e#2313#2710#0" expanded="false" />
-            <element signature="e#2752#3731#0" expanded="false" />
-            <element signature="e#3781#7163#0" expanded="false" />
-            <element signature="e#3812#4665#0" expanded="false" />
-            <element signature="e#4704#5565#0" expanded="false" />
-            <element signature="e#5604#6456#0" expanded="false" />
-            <element signature="e#6497#7163#0" expanded="false" />
-            <element signature="e#7216#10108#0" expanded="false" />
-            <element signature="e#7250#7983#0" expanded="false" />
-            <element signature="e#8022#8751#0" expanded="false" />
-            <element signature="e#8793#9525#0" expanded="false" />
-            <element signature="e#9569#10108#0" expanded="false" />
+            <element signature="e#0#33#0" expanded="true" />
+            <element signature="e#101#1432#0" expanded="false" />
+            <element signature="e#1462#3014#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dot_convert.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="304" column="37" selection-start-line="304" selection-start-column="37" selection-end-line="304" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#93#3093#0" expanded="false" />
+            <element signature="e#3144#6096#0" expanded="false" />
+            <element signature="e#6147#9927#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1666">
+        <state relative-caret-position="560">
           <caret line="105" column="12" selection-start-line="105" selection-start-column="12" selection-end-line="106" selection-end-column="45" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
@@ -1154,14 +1074,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rnaml_convert.py">
+    <entry file="file://$PROJECT_DIR$/Tests/test_converter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="132" column="22" selection-start-line="132" selection-start-column="22" selection-end-line="132" selection-end-column="22" />
+        <state relative-caret-position="340">
+          <caret line="280" column="31" selection-start-line="280" selection-start-column="31" selection-end-line="280" selection-end-column="31" />
           <folding>
-            <element signature="e#0#33#0" expanded="true" />
-            <element signature="e#101#1432#0" expanded="false" />
-            <element signature="e#1462#3014#0" expanded="false" />
+            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#349#3740#0" expanded="false" />
+            <element signature="e#380#982#0" expanded="false" />
+            <element signature="e#1022#1636#0" expanded="false" />
+            <element signature="e#1676#2281#0" expanded="false" />
+            <element signature="e#2322#2719#0" expanded="false" />
+            <element signature="e#2761#3740#0" expanded="false" />
+            <element signature="e#3790#7181#0" expanded="false" />
+            <element signature="e#3821#4677#0" expanded="false" />
+            <element signature="e#4716#5580#0" expanded="false" />
+            <element signature="e#5619#6474#0" expanded="false" />
+            <element signature="e#6515#7181#0" expanded="false" />
+            <element signature="e#7268#8004#0" expanded="false" />
+            <element signature="e#8043#8775#0" expanded="false" />
+            <element signature="e#8817#9552#0" expanded="false" />
+            <element signature="e#9596#10135#0" expanded="false" />
           </folding>
         </state>
       </provider>
