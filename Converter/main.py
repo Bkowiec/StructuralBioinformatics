@@ -5,7 +5,7 @@ from bpseq_convert import bpseq2ct, bpseq2rnaml, bpseq2dot
 from ct_convert import ct2bpseq, ct2rnaml, ct2dot
 from dot_convert import dot2ct, dot2bpseq, dot2rnaml
 from rnaml_convert import rnaml2dot, rnaml2bpseq, rnaml2ct
-from multi import multil
+from multi_line import fromdot
 
 connect = "\s*\d+\s+[A-Z]\s+\d+\s+\d+\s+\d+\s+\d+"
 base_pair = "\s*\d+\s+[A-Z]\s+\d+(?!\s)"
@@ -89,7 +89,7 @@ try:
             y = input('Multiline (y/n)?' + '\n')
             try:
                 if y == 'y':
-                    multil(file_lines, title, file_name)
+                    fromdot(file_lines, title, file_name)
                 else:
                     x = input(
                         'Choose save format:' + '\n' + '0 - All formats' + '\n' + '1 - Connect (.ct)' + '\n' + '2 - Basepair (.bpseq)' + '\n' + '3 - RNAML (.XML)' + '\n')

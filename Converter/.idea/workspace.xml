@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a728a30-f824-4f37-9bbb-bfab79a50f40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tests/test_converter.py" afterPath="$PROJECT_DIR$/Tests/test_converter.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Tests/1(ct)" afterPath="$PROJECT_DIR$/Tests/seq2(ct)" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Tests/1(dot)" afterPath="$PROJECT_DIR$/Tests/seq2(dot)" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Tests/1.xml" afterPath="$PROJECT_DIR$/Tests/seq1.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Tests/2(bpseq)" afterPath="$PROJECT_DIR$/Tests/seq2(bpseq)" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Tests/2(ct)" afterPath="$PROJECT_DIR$/Tests/seq1(ct)" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Tests/2(dot)" afterPath="$PROJECT_DIR$/Tests/seq1(dot)" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Tests/3(bpseq)" afterPath="$PROJECT_DIR$/Tests/seq3(bpseq)" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Tests/3(ct)" afterPath="$PROJECT_DIR$/Tests/seq3(ct)" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Tests/3.xml" afterPath="$PROJECT_DIR$/Tests/seq3.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dot_structure.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/multi.py" afterPath="$PROJECT_DIR$/multi_line.py" />
     </list>
     <ignored path="Converter.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,7 +32,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="test_converter.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test_converter.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tests/test_converter.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
@@ -67,6 +59,30 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1547">
+              <caret line="91" column="27" selection-start-line="91" selection-start-column="27" selection-end-line="91" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="multi_line.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/multi_line.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="11" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="11" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -75,13 +91,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/dot_convert.py" />
         <option value="$PROJECT_DIR$/ct_convert.py" />
         <option value="$PROJECT_DIR$/dot_structure.py" />
         <option value="$PROJECT_DIR$/bpseq_convert.py" />
         <option value="$PROJECT_DIR$/rnaml_convert.py" />
         <option value="$PROJECT_DIR$/Tests/test_converter.py" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
@@ -156,8 +172,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -527,7 +543,7 @@
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18078668" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18305598" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -569,6 +585,31 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Tests/test_converter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#349#3740#0" expanded="false" />
+            <element signature="e#380#982#0" expanded="false" />
+            <element signature="e#1022#1636#0" expanded="false" />
+            <element signature="e#1676#2281#0" expanded="false" />
+            <element signature="e#2322#2719#0" expanded="false" />
+            <element signature="e#2761#3740#0" expanded="false" />
+            <element signature="e#3790#7181#0" expanded="false" />
+            <element signature="e#3821#4677#0" expanded="false" />
+            <element signature="e#4716#5580#0" expanded="false" />
+            <element signature="e#5619#6474#0" expanded="false" />
+            <element signature="e#6515#7181#0" expanded="false" />
+            <element signature="e#7268#8004#0" expanded="false" />
+            <element signature="e#8043#8775#0" expanded="false" />
+            <element signature="e#8817#9552#0" expanded="false" />
+            <element signature="e#9596#10135#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ct_convert.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2074">
@@ -579,14 +620,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dot_structure.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="24" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/dot_structure.py" />
     <entry file="file://$PROJECT_DIR$/bpseq_convert.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -670,14 +704,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dot_structure.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="24" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/dot_structure.py" />
     <entry file="file://$PROJECT_DIR$/bpseq_convert.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -759,13 +786,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/multi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/multi.py" />
     <entry file="file://$PROJECT_DIR$/ct_convert.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1001,13 +1022,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/multi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/multi.py" />
     <entry file="file://$PROJECT_DIR$/ct_convert.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2074">
@@ -1018,14 +1033,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dot_structure.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="24" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/dot_structure.py" />
     <entry file="file://$PROJECT_DIR$/bpseq_convert.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1064,16 +1072,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="105" column="12" selection-start-line="105" selection-start-column="12" selection-end-line="106" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tests/test_converter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -1095,6 +1093,26 @@
             <element signature="e#8043#8775#0" expanded="false" />
             <element signature="e#8817#9552#0" expanded="false" />
             <element signature="e#9596#10135#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/multi_line.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="11" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1547">
+          <caret line="91" column="27" selection-start-line="91" selection-start-column="27" selection-end-line="91" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>

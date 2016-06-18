@@ -3,7 +3,7 @@ import re
 from dot_convert import dot2ct, dot2bpseq, dot2rnaml
 
 
-def multil(cts, title, file_name):
+def fromdot(cts, title, file_name):
     dot_form = "[AUGC]{2,}"
     bracket_form = "[\.\<\[\{\(\)\>\]\}\s]{2,}"
     finally_form = []
